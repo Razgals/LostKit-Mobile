@@ -47,7 +47,6 @@ class _GameScreenState extends State<GameScreen> {
   bool   _afkAlerted   = false;
   Timer? _afkTimer;
   final AudioPlayer _audioPlayer = AudioPlayer();
-  bool _afkAlertFlash = false; // red screen flash when alert fires
 
   // ── JS ────────────────────────────────────────────────────────────────────
   static const String _fullscreenJS = r'''
@@ -253,13 +252,6 @@ class _GameScreenState extends State<GameScreen> {
 
   Future<void> _triggerAfkAlert() async {
     debugPrint('_triggerAfkAlert() entered');
-
-    // ── Visual flash — always works regardless of sound/vibration ──
-    if (mounted) {
-      setState(() => _afkAlertFlash = true);
-      await Future.delayed(const Duration(milliseconds: 600));
-      if (mounted) setState(() => _afkAlertFlash = false);
-    }
 
     // ── Sound — resume pre-loaded asset ────────────────────────────
     if (_afkSettings.soundEnabled) {
@@ -474,10 +466,6 @@ class _GameScreenState extends State<GameScreen> {
           // Screenshot flash
           if (_screenshotFlash)
             IgnorePointer(child: Container(color: Colors.white.withOpacity(0.5))),
-
-          // AFK alert flash — red overlay fires when threshold is hit
-          if (_afkAlertFlash)
-            IgnorePointer(child: Container(color: const Color(0xFFCC0000).withOpacity(0.25))),
 
           // ── Top-left: menu button ──────────────────────────────────
           Positioned(
