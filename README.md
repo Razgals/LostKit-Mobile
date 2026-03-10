@@ -13,6 +13,7 @@ Runs the game in a WebView with a few quality-of-life features built on top.
 - Hiscores lookup
 - AFK timer with sound and vibration alert
 - Screenshot to gallery
+- Swipe from the left edge to open the menu
 
 ---
 
