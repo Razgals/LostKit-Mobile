@@ -1,6 +1,6 @@
 # LostKit Mobile
 
-Android client for [2004.lostcity.rs](https://2004.lostcity.rs) — the Greatest Runescape preservation server in history.
+Android client for [2004.lostcity.rs](https://2004.lostcity.rs) - the Greatest Runescape preservation server in history.
 
 Runs the game in a WebView with a few quality-of-life features built on top.
 
@@ -19,7 +19,7 @@ Runs the game in a WebView with a few quality-of-life features built on top.
 
 ## Requirements
 
-- [Flutter SDK](https://docs.flutter.dev/get-started/install) — version 3.0 or higher
+- [Flutter SDK](https://docs.flutter.dev/get-started/install) - version 3.0 or higher
 - Android Studio or VS Code (for the Android toolchain)
 - An Android device or emulator running Android 6.0+
 - Java 17 (comes with Android Studio)
@@ -53,7 +53,7 @@ The APK will also be saved to `build/app/outputs/flutter-apk/app-debug.apk` if y
 
 ## Notes
 
-- The `VIBRATE` permission is already declared in `AndroidManifest.xml` — no extra steps needed for vibration to work
+- The `VIBRATE` permission is already declared in `AndroidManifest.xml` - no extra steps needed for vibration to work
 - AFK timer is always disabled on startup regardless of what you had it set to last session
-- Sound file lives at `assets/sounds/afk_alert.mp3` — swap it out if you want a different alert sound, just keep the same filename
+- Sound file lives at `assets/sounds/afk_alert.mp3` - swap it out if you want a different alert sound, just keep the same filename
 - **Battery saver mode** on Android can silence audio and block vibration. If sound or vibration isn't working, check that battery saver is off. The red screen flash should always fire regardless.
