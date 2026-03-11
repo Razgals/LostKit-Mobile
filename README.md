@@ -56,4 +56,4 @@ The APK will also be saved to `build/app/outputs/flutter-apk/app-debug.apk` if y
 - The `VIBRATE` permission is already declared in `AndroidManifest.xml` - no extra steps needed for vibration to work
 - AFK timer is always disabled on startup regardless of what you had it set to last session
 - Sound file lives at `assets/sounds/afk_alert.mp3` - swap it out if you want a different alert sound, just keep the same filename
-- **Battery saver mode** on Android can silence audio and block vibration. If sound or vibration isn't working, check that battery saver is off. The red screen flash should always fire regardless.
+- **Battery saver mode** on Android can silence audio and block vibration. If sound or vibration isn't working, check that battery saver is off.
