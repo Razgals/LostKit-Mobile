@@ -27,6 +27,7 @@ flutter:
     - assets/
     - assets/skillicons/
     - assets/sounds/
+    - assets/widgets/
     - assets/afktimer.png
     - assets/zoom.png
 
